@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum EmailTypeEnum {
 
-    NEW_USER_REGISTERED("new_user_registered.ftl"),
-    INVITED_USER_REGISTERED("invite_user_registered.ftl");
+    NEW_USER_REGISTERED("new_user_registered"),
+    INVITED_USER_REGISTERED("invited_user_registered");
 
     final String template;
 

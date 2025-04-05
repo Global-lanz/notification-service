@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Your account has been registered.</title>
+    <title>Você foi convidado para a empresa ${company}!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,19 +47,20 @@
 </head>
 <body>
 <div class="container">
-    <h1>Your account has been registered.</h1>
-    <p>Hello ${name},</p>
+    <h1>Você foi convidado para a empresa ${company}.</h1>
+    <p>Olá ${name},</p>
 
-    <p>Welcome to Global Lanz. We are happy to have you with us!</p>
+    <p>Bem-vindo(a) a Global Lanz. Estamos felizes em ter-nos conosco</p>
+    <p>Você foi convidado a contribuir com ${company}!</p>
 
     <#if link?? && linkLabel??>
-        <p>To activate your account, please access the link below</p>
+        <p>Para ativar sua conta, acesse o link abaixo </p>
         <a href="${link}" class="button">${linkLabel}</a>
     </#if>
 
     <div class="footer">
-        This is an automated message. Do not respond this e-mail<br>
-        &copy; ${year} Global Lanz Technologies. All rights reserved.
+        Esta é uma mensagem automática. Não responda este e-mail.<br>
+        &copy; ${year} Global Lanz Technologies. Todos os direitos reservados.
     </div>
 </div>
 </body>

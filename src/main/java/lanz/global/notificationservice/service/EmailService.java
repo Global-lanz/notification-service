@@ -26,7 +26,6 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-
     public void sendEmail(EmailEvent event, Locale locale) {
         try {
             Map<String, Object> data = event.data;
@@ -45,7 +44,7 @@ public class EmailService {
             helper.setTo(event.email);
             helper.setSubject(event.subject);
             helper.setText(stringWriter.toString(), true);
-            helper.setFrom("global.lanzendorf.technologies@gmail.com");
+            helper.setFrom("Global Lanz Technologies <global.lanzendorf.technologies@gmail.com>");
 
             mailSender.send(message);
         } catch (Exception e) {
@@ -53,16 +52,4 @@ public class EmailService {
         }
     }
 
-    public MailtrapMail createEmailRequest(EmailEvent event, String html, Map<String, String> headers) {
-        Address from = new Address("global.lanzendorf.technologies@gmail.com", "Global Lanz Technologies");
-        Address to = new Address(event.email, event.data.get("name").toString());
-        return MailtrapMail.builder()
-                .from(from)
-                .to(List.of(to))
-                .html(html)
-                .text(html)
-                .subject(event.subject)
-                .headers(headers)
-                .build();
-    }
 }
