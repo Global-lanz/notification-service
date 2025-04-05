@@ -3,7 +3,6 @@ package lanz.global.notificationservice.consumer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lanz.global.notificationservice.event.EmailEvent;
-import lanz.global.notificationservice.event.Event;
 import lanz.global.notificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

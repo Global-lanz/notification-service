@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your account has been registered.</title>
+    <title>Your have been invited for the company ${company}!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,10 +47,11 @@
 </head>
 <body>
 <div class="container">
-    <h1>Your account has been registered.</h1>
+    <h1>Your have been invited for the company ${company}.</h1>
     <p>Hello ${name},</p>
 
-    <p>Welcome to Global Lanz. We are happy to have you with us!</p>
+    <p>Welcome to Global Lanz. We are happy to have you with us</p>
+    <p>You have been invited to contribute with ${company}!</p>
 
     <#if link?? && linkLabel??>
         <p>To activate your account, please access the link below</p>
