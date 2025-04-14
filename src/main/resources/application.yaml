@@ -24,10 +24,10 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    host: ${SPRING_MAIL_HOST:smtp.gmail.com}
+    port: ${SPRING_MAIL_PORT:587}
+    username: ${SPRING_MAIL_USERNAME}
+    password: ${SPRING_MAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -44,7 +44,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka}
 
 
 logging:
