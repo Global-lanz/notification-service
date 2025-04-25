@@ -46,7 +46,12 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka}
 
-
 logging:
   level:
     org.springframework.boot.context.config: DEBUG
+
+# Zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0
