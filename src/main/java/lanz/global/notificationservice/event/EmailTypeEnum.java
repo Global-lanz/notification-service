@@ -6,7 +6,8 @@ import lombok.Getter;
 public enum EmailTypeEnum {
 
     NEW_USER_REGISTERED("new_user_registered"),
-    INVITED_USER_REGISTERED("invited_user_registered");
+    INVITED_USER_REGISTERED("invited_user_registered"),
+    PASSWORD_RECOVERY("password_recovery"),;
 
     final String template;
 
